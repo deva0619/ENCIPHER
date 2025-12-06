@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Class & Activities</title>
+</head>
+<body>
+  <h1>Class Schedule</h1>
+  <nav>
+    <a href="#timetable">Timetable</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#activities">Activities</a>
+  </nav>
+
+  <section id="timetable">
+    <h2>Weekly Timetable</h2>
+    <table border="3" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>9:00 - 10:00</td>
+          <td rowspan="2">Mathematics</td> 
+          <td>Science</td>
+          <td>English</td>
+          <td rowspan="3">Computer Lab</td> 
+          <td>History</td>
+        </tr>
+        <tr>
+          <td>10:00 - 11:00</td>
+          <td>Maths Practice</td>
+          <td>English Activity</td>
+          <td>Geography</td>
+        </tr>
+        <tr>
+          <td>11:30 - 12:30</td>
+          <td>Arts & Craft</td>
+          <td colspan="2">Assembly / Guest Lecture</td> 
+          <td>Sports</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="subjects">
+    <h2>Subjects - Topics (nested list)</h2>
+    <ul>
+      <li>Mathematics
+        <ul>
+          <li>Algebra</li>
+          <li>Geometry
+            <ul><li>Triangles</li><li>Circles</li><li>Semi-circle</li></ul>
+          </li>
+          <li>Statistics</li>
+        </ul>
+      </li>
+      <li>Science
+        <ul>
+          <li>Physics</li>
+          <li>Chemistry</li>
+          <li>Biology</li>
+        </ul>
+      </li>
+      <li>Computer Science
+        <ul>
+          <li>Basics of HTML</li>
+          <li>Introduction to Python</li>
+          <li>Basics Java</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section id="activities">
+    <h2>Other Activities</h2>
+    <p>Click <a href="#timetable">here</a> to return to the timetable.</p>
+  </section>
+</body>
+</html>
