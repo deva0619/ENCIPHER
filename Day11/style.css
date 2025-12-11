@@ -1,0 +1,76 @@
+
+/* 1.CLASSES */
+.select1 {
+    background: #ffd1d1;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+.select2 {
+    background: #d1ffec;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+.select3 {
+    background: #d1d9ff;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+.select4 {
+    background: #fff2b3;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+.select5 {
+    background: #f2d1ff;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+
+/* 2. ATTRIBUTE SELECTORS */
+
+
+input[type="text"] {
+    border: 2px solid blue;
+}
+
+input[type="email"] {
+    border: 2px solid green;
+}
+
+input[type="password"] {
+    border: 2px solid red;
+}
+
+input[type="submit"] {
+    background: black;
+    color: white;
+    padding: 6px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* 3. ID SELECTORS */
+
+
+#p1 {
+    color: red;
+}
+
+#p2 {
+    color: blue;
+}
+
+#p3 {
+    color: green;
+}
+
+
+/* 4. GROUP SELECTOR */
+
+
+h3, p, span {
+    font-family: Arial;
+    letter-spacing: 1px;
+}
