@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p::first-line{
+                color: brown;
+                font-size: 20px;
+            }
+            p::first-letter{
+                color: rgb(6, 8, 100);
+                font-size: larger;
+            }
+            ::Marker{
+                color: rgb(5, 224, 213);
+                font-size: 15px;
+            }
+            p.first::first-letter{
+                color: darkorange;
+                font-size: 50px;
+            }
+            p.second::first-letter{
+                color:darkblue;
+                font-size: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Using ::first-line</h2>
+        <p>Point and purposeis the key to understanding types of paragraphs and kinds of paragraphs. In writing, the words point and purposeare almost synonymous. </p>
+    <hr>
+    <h2>Marker</h2>
+    <ul>
+        <li>Apple</li>
+         <li>Banana</li>
+          <li>Guava</li>
+           <li>Grapes</li>
+    </ul>
+    <ol>
+        <li>One</li>
+         <li>Two</li>
+          <li>Three</li>
+    </ol>
+    <hr>
+    <h2>Pseudoelement</h2>
+    <p class="first">This is first paragraph</p>
+    <p class="second">This is second paragraph</p>
+    </body>
+    </body>
+</html>

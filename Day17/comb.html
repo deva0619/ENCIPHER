@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .des p{
+                background-color: deepskyblue;
+            }
+            .chld > p{
+                 background-color:blueviolet
+            }
+            .ns + p{
+                background-color: chocolate;
+            }
+            .ss ~ p{
+                background-color: darkgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Descendant combinator</h2>
+        <p>This text is outside the div tag</p>
+        <div class="des">
+            <p>This text is styled using descendant combinator.</p>
+        </div>
+        <hr>
+        <h2>child combinator</h2>
+        <div class="chld">
+            <p>This text is styled using descendant combinator.</p>
+            <section>This text is inside the section element.</section>
+        </div>
+        <hr>
+        <h2>Next siblling</h2>
+        <div class="ns">
+            <p>This combinator is used to select the element that immediately after the div tag.</p>
+         </div>
+        <p>This combinator is specified using the symbol (+).</p>
+        <hr>
+        <h2>Subsequent siblling</h2>
+        <div class="ss">
+            <p>It selects the element that are next siblling of the div.</p>
+        </div>
+        <p>Hi!..</p>
+        <hr>
+        
+    </body>
+</html>
+
