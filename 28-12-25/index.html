@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Basics</title>
+</head>
+<body>
+    <script>
+        //task1
+    let name = prompt("Enter your name");
+    function greet(n) {
+    alert("Hello " + n);
+}
+greet(name);
+
+//task2
+let number = Number(prompt("Enter a number"));
+function check(n) {
+   if(n%2==0){
+    alert(number + "is even");
+   }
+   else{
+    alert(number + "is odd");
+   }
+}
+check(number);
+
+//task3
+ let n1=prompt("Enter num1");
+        let n2=prompt("Enter num2");
+        let opt=prompt("Enter operator");
+        switch(opt){
+            case "+":
+                alert(Number(n1)+Number(n2));
+                alert(n1+n2);
+                break;
+            case "-":
+                alert(n1-n2);
+                break;
+            case "*":
+                alert(n1*n2);
+                break;
+            case "/":
+                alert(n1/n2);
+                break;
+            default:
+                alert("Inavlid");
+        }
+
+//task4
+        let age = prompt("Enter age");
+        if(age >= 18){
+            alert("Eligible");
+        }
+        else{
+            alert("Not Eligible");
+        }
+//task5
+
+        let n = prompt("Enter number");
+        for (let i = 1; i <= 10; i++) {
+        console.log(n + " x " + i + " = " + n * i);
+} 
+
+//task6
+let limit = prompt("Enter limit");
+function sum(n) {
+    let s = 0;
+    for (let i = 1; i <= n; i++){ 
+    s += i;
+}
+alert(sum(limit));
+}
+
+
+//task7
+let pass = prompt("Enter password");
+if(pass.length >= 6){
+    alert("valid");
+}
+else{
+    alert("Invalid");
+}
+
+//task8
+let mark=prompt("Enter marks");
+        if(mark>=90){
+            alert("A grade");
+        }
+        else if(mark>=70&&mark<90){
+            alert("B grade");
+        }
+        else if(mark>=50&&mark<70){
+            alert("C grade");
+        }
+        else{
+            alert("Fail");
+        }
+
+
+//task9
+        let x = prompt("Enter first number");
+        let y = prompt("Enter second number");
+        let z = prompt("Enter third number");
+        if(x>y&&x>z){
+            alert("x is largest");
+        }
+        else if(y>x&&y>z){
+            alert("y is largest");
+        }
+        else{
+            alert("z is largest");
+        } 
+
+//task10
+        let user = "admin";
+        let pwd = "1234";
+        let u = prompt("Enter username");
+        let pd = prompt("Enter password");
+        alert(u === user && pd === pwd ? "Login Successful" : "Login Failed");
+
+
+//task11
+        let value = prompt("Enter limit");
+        let c = 0;
+        for (let i = 1; i <= value; i++) {
+        if (i % 2 === 0) c++;
+    }
+    alert(count);
+
+//task12
+   let v = prompt("Enter number");
+function reverse(n) {
+    let r = 0;
+    while (n > 0) {
+        r = r * 10 + (n % 10);
+        n = Math.floor(n / 10);
+    }
+    return r;
+}
+alert(reverse(v));
+
+//task13
+let p = prompt("Enter principal");
+let r =prompt("Enter rate");
+let t =prompt("Enter time");
+function si(p, r, t) {
+    return (p * r * t) / 100;
+}
+alert(si(p, r, t));
+
+//task14
+let fixed = 5;
+let guess = Number(prompt("Guess the number"));
+if (guess > fixed) alert("Too High");
+else if (guess < fixed) alert("Too Low");
+else alert("Correct");
+
+//task15
+ let s=prompt("Enter number");
+        let cou=0;
+        for(let i=1;i<=s;i++){
+            if(s%i===0){
+                cou++;
+            }
+        }
+        if(cou==2){
+            alert("prime");
+        }
+        else{
+            alert("Not prime");
+        }
+
+
+//task16
+        let nums = Number(prompt("Enter number"));
+function factorial(n) {
+    let f = 1;
+    for (let i = 1; i <= n; i++) f *= i;
+    return f;
+}
+alert(factorial(nums));
+
+//task17
+let num = Number(prompt("Enter number"));
+let count = 0;
+while (num > 0) {
+    count++;
+    num = Math.floor(num / 10);
+}
+alert(count);
+
+//task18
+let choice = prompt("1.Add 2.Sub 3.Mul");
+let a = Number(prompt("Enter first number"));
+let b = Number(prompt("Enter second number"));
+switch (choice) {
+    case "1": 
+    alert(a + b); 
+    break;
+    case "2": 
+    alert(a - b); 
+    break;
+    case "3": 
+    alert(a * b); 
+    break;
+    default: 
+    alert("Invalid Choice");
+}
+//task19
+let lim = Number(prompt("Enter limit"));
+let evenSum = 0;
+let oddSum = 0;
+for (let i = 1; i <= lim; i++) {
+    if (i % 2 === 0) evenSum += i;
+    else oddSum += i;
+}
+alert("Even Sum: " + evenSum + " Odd Sum: " + oddSum);
+
+//task20
+let exit = confirm("Do you want to exit?");
+alert(exit ? "Exited" : "Continue");
+
+    </script>
+</body>
+</html>
