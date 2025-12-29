@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task2</title>
+</head>
+<body>
+    <script>
+    //Time
+    let Time=Number(prompt("Enter time"));
+    function greet(hour){
+    if(hour<12){
+        alert("Good Morning");
+    }
+    else if(hour>=12 && hour<=17){
+        alert("Good Afternoon");
+    }
+    else{
+        alert("Good Night");
+    }
+}
+greet(Time);
+
+// pos,neg,zero
+let num=Number(prompt("Enter number:"));
+if(num>0){
+    alert("Positive");
+}
+else if(num<0){
+    alert("Negative");
+}
+else{
+    alert("Zero");
+}
+
+// Attendance
+let total=Number(prompt("Enter total class"));
+let attend=Number(prompt("Enter attendance"));
+let percentage=(attend/total)*100;
+if(percentage>=75){
+    alert("Eligible");
+}
+else{
+    alert("Not Eligible");
+}
+
+// largest 
+let range=Number(prompt("Enter Range"));
+let max=0;
+for(let i=0;i<=range;i++){
+    let value=Number(prompt("Enter the value"));
+    if(value>max){
+        max=value;
+    }
+    alert("Largest: "+max)
+}
+
+// temparature
+let option=prompt("Enter the option");
+let t=Number(prompt("Enter temp: "));
+function conv(option,t){
+    if(option=="C"){
+        let f=(t*9/5)+32;
+        alert("Fahrenheit " +f);
+    }
+    else if(option=="F"){
+        let c=(t-32)*5/9;
+        alert("Celsius " +c);
+    }
+    else{
+        alert("Invalid");
+    }
+}
+conv(option,t);
+
+// vowels
+let str=prompt("Enter String");
+let c=0;
+for(let i=0;i<str.length;i++){
+    if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U'){
+        c++;
+    }
+}
+alert("Vowels: " +c);
+
+// Num pattern
+let n=Number(prompt("Enter the num: "));
+for(let i=1;i<=n;i++){
+    let row="";
+    for(let j=1;j<=i;j++){
+        row=row+j+" ";
+    }
+    console.log(row);
+}
+
+//Smallest
+let a1=Number(prompt("Enter num1: "));
+let a2=Number(prompt("Enter num2: "));
+let a3=Number(prompt("Enter num3: "));
+if(a1<a2 && a1<a3){
+    alert("Smallest " +a1);
+}
+else if(a2<a3 && a2<a3){
+    alert("Smallest " +a2);
+}
+else{
+    alert("Smallest " +a3);
+}
+
+// calculator
+let item=Number(prompt("Enter the item: "));
+let price=Number(prompt("Enter the price: "));
+let tot=item*price;
+alert("Total " +tot);
+
+// Leap Year
+let Year=Number(prompt("Enter year"));
+if((Year%4===0 && Year%100!==0) || Year%400===0){
+    alert("Leap year");
+}
+else{
+    alert("Not a Leap year");
+}
+
+// odd num
+let digit=Number(prompt("Enter the digit: "));
+let count=0;
+for(let i=0;i<=digit;i++){
+    if(i%2!==0){
+        count++;
+    }
+}
+alert("Odd Numbers: " +count);
+
+// Palindrome
+let st=prompt("Enter the String: ");
+let rev="";
+for(let i=st.length-1;i>=0;i--){
+    rev+=st[i];
+}
+if(st===rev){
+    alert("Palindrome");
+}
+else{
+    alert("Not a Palindrome");
+}
+
+// Power
+let x=Number(prompt("Base value"));
+let y=Number(prompt("Exponent"));
+let res=1;
+for(let i=1;i<=y;i++){
+    res*=x;
+}
+alert("Result " +res);
+
+// Student result
+let mark1=Number(prompt("Enter the mark1"));
+let mark2=Number(prompt("Enter the mark2"));
+let mark3=Number(prompt("Enter the mark3"));
+let Total=mark1+mark2+mark3;
+let avg=Total/3;
+if(avg>=50){
+    alert("Pass");
+}
+else{
+    alert("Fail");
+}
+
+// currency converter
+let rupee=Number(prompt("Enter amount in rupees: "));
+let rate=83;
+alert("Dollars: " +(rupee/rate));
+
+// sum of digits
+let A=Number(prompt("Enter the value: "));
+let sum=0;
+while(n>0){
+    sum+=n%10;
+    n=Math.floor(n/10);
+}
+alert("Sum of Digits: " +sum);
+
+// Menu 
+let chance;
+do{
+    chance=prompt("1.Hello\n2 2.Bye\n3 3.Exit")
+    if(chance==1){
+        alert("Hello");
+    }
+    else if(chance==2){
+        alert("Bye");
+    }
+}
+while(chance!=3);
+
+// Avg
+let N=Number(prompt("Total Numbers: "));
+let s=0;
+for(let i=1;i<=n;i++){
+    s+=Number(prompt("Enter num: "));
+}
+alert("Avg:" +(s/N));
+
+// Div
+let p=Number(prompt("Enter num: "));
+if(p%3===0 && p%5===0){
+    alert("Divisible by 3 & 5");
+}
+else if(p%3===0){
+    alert("Divisible by 3");
+}
+else if(p%5===0){
+    alert("Divisible by 5");
+}
+else{
+    alert("Not Divisible by both");
+}
+
+// Login 
+let attempt=Number(prompt("Enter the Attempts"));
+let pwd=Number(prompt("Enter the password: "));
+while(attempt>0){
+    let i=Number(prompt("Enter the pwd"));
+    if(i==password){
+        alert("Login Success");
+        break;
+    }
+    else{
+        attempt--;
+        alert("Wrong password. " +attempt);
+    }
+}
+if(attempt==0){
+    alert("Account Locked");
+}
+</script>
+</body>
+</html>
