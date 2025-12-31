@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <script>
+        // USERNAME FORMAT
+        // let name=prompt("Enter the Name: ");
+        // name=name.trim().toLowerCase();
+        // alert("Name: " +name);
+
+        // MAIL VALIDATION
+        // let mail=prompt("Enter the mail: ");
+        // if(mail.includes("@")){
+        //     alert("Valid");
+        // }
+        // else{
+        //     alert("Not Valid");
+        // }
+
+        // CHAR COUNT
+        // let string=prompt("Enter sentence: ");
+        // let count=0;
+        // for(let i=0;i<string.length;i++){
+        //     if(string[i]!=" "){
+        //         count++;
+        //     }
+        // }
+        // alert("Character: " +count);
+
+        // WORD COUNT
+        // let text=prompt("Enter the word: ");
+        // let word=text.trim().split(" ");
+        // alert("Words count: "+word.length);
+
+        // first & last char
+        // let str=prompt("Enter the String: ");
+        // if(str.length>0){
+        //     alert("First: " + str[0] + " Last: " + str[str.length-1]);
+        // }
+
+        // Replace word
+        // let sentence=prompt("Enter sentence: ");
+        // let old=prompt("replace: ");
+        // let word=prompt("New word");
+        // alert(sentence.replace(old,word));
+
+        // string length
+        // let a=prompt("Enter the text: ");
+        // if(a.length<5||a.length>20){
+        //     alert("Invalid");
+        // }
+        // else{
+        //     alert("Valid");
+        // }
+
+        // Uppercase
+        // let x=prompt("Enter the String: ");
+        // let count=0;
+        // for(let i=0;i<x.length;i++){
+        //     if(x[i]>='A' && x[i]<='Z'){
+        //         count++;
+        //     }
+        // }
+        // alert("Uppercase: " + count);
+
+        // Remove special char
+        // let y=prompt("Enter the string: ");
+        // let remove="";
+        // for(let i=0;i<y.length;i++){
+        //     let ch=y[i];
+        //     if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z') || (ch>='0' && ch<='9')){
+        //         remove+=ch;
+        //     }
+        // }
+        // alert("Remove: " + remove);
+
+        // Start & End with
+        // let r=prompt("Enter the sentence: ");
+        // if(r.startsWith("Good") && r.endsWith("Morning")){
+        //     alert("Match");
+        // }
+        // else{
+        //     alert("Not Match");
+        // }
+
+        // longest word
+        // let a=prompt("Enter the sentence: ");
+        // let b=a.split(" ");
+        // let long="";
+        // for(let i=0;i<b.length;i++){
+        //     if(b[i].length>long.length){
+        //         long=b[i];
+        //     }
+        // }
+        // alert("Longest: " + long);
+
+        // Case Conversion
+        // let sen=prompt("Enter the sentence: ");
+        // let w=sen.split(" ");
+        // let result="";
+        // for(let i=0;i<w.length;i++){
+        //     let wd=w[i];
+        //     let first=wd[0].toUpperCase();
+        //     let res=wd.slice(1).toLowerCase();
+        //     result+=first+res+" ";
+        // }
+        // alert(result.trim());
+
+        // Mobile number
+        // let mobile=prompt("Enter MobileNumber: ");
+        // let mask="******" + mobile.slice(-4);
+        // alert(mask);
+
+        // Repeated char
+        // let s=prompt("Enter the String: ");
+        // for(let i=0;i<s.length;i++){
+        //     for(let j=i+1;j<s.length;j++){
+        //         if(s[i]===s[j]){
+        //             alert("Repeated: " +s[i]);
+        //             i=s.length;
+        //             break;
+        //         }
+        //     }
+        // }
+
+        // Vowel & Consonants
+        // let z=prompt("Enter string: ");
+        // let v=0,c=0;
+        // for(let i=0;i<z.length;i++){
+        //     let ch=z[i];
+        //     if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U'){
+        //         v++;
+        //     }
+        //     else if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z')){
+        //         c++;
+        //     }
+        // }
+        // alert("Vowels: " + v + "Consonants: " + c);
+
+        // Remove Duplicate
+        // let h=prompt("Enter the sentence: ");
+        // let m=h.split(" ");
+        // let r=[];
+        // for(let i=0;i<m.length;i++){
+        //     if(r.indexOf(m[i])==-1){
+        //         r.push(m[i]);
+        //     }
+        // }
+        // alert(r.join(" "));
+
+        // check Anagram
+        // let d=prompt("Enter First Str: ");
+        // let e=prompt("Enter Second Str: ");
+        // let d1=d.split("").sort().join("");
+        // let e1=e.split("").sort().join("");
+        // if(d1===e1){
+        //     alert("Anagram");
+        // }
+        // else{
+        //     alert("Not Anagram");
+        // }
+
+        // Trim & compare str
+        // let s1=prompt("Enter the First: ").trim();
+        //  let s2=prompt("Enter the Second: ").trim();
+        //  if(s1===s2){
+        //     alert("Equal");
+        //  }
+        //  else{
+        //     alert("Not Equal");
+        //  }
+
+        // Extract numbers
+        // let g=prompt("Enter the str: ");
+        // let num="";
+        // for(let i=0;i<g.length;i++){
+        //     if(g[i]>='0' && g[i]<='9'){
+        //         num+=g[i];
+        //     }
+        // }
+        // alert("Numbers: " + num);
+
+        // Password check
+        // let pwd=prompt("Enter password: ");
+        // let hasUpper=false;
+        // let hasNum=false;
+        // for(let i=0;i<pwd.length;i++){
+        //     let ch=pwd[i];
+        //     if(ch>='A' && ch<='Z'){
+        //         hasUpper=true;
+        //     }
+        //     if(ch>='0' && ch<='9'){
+        //         hasNum=true;
+        //     }
+        // }
+        // if(pwd.length>=6 && hasUpper && hasNum){
+        //     alert("Strong");
+        // }
+        // else{
+        //     alert("Weak");
+        // }
+    </script>
+</body>
+</html>
