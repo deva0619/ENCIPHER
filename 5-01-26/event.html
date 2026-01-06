@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. <button onclick="showAlert()">Click Here..</button> -->
+    <!-- 3. <button onclick="changeColor()">Changed.</button> -->
+    <!-- 4. <p id="paragraph">HI!.</p>
+    <button onclick="show()">Visible</button>
+    <button onclick="hide()">Not Visible</button> -->
+    <!-- 5. <div ondblclick="change()">Double Click.</div> -->
+    <!-- 6.<p ondblclick="size()">change size.</p> -->
+    <!-- 7.<div id="box" style="width: 150px; height: 150px; background: red;"></div> -->
+    <!-- 8.<button id="btn">Hover</button>
+     <div id="tool" style="display: none;">ToolTip</div> -->
+    <!-- 9.<div id="area" style="height: 100px; border: 1px solid black;">coordinates</div> -->
+    <!-- 10.<div id="box" style="height: 100px;"></div> -->
+    <!-- 13.<input type="text" placeholder="Press key"> -->
+    <!-- <input type="text" id="text"> -->
+    <!-- 15. -->
+    <!-- <form onsubmit="return false">
+        <input>
+        <button>Submit</button>
+    </form> -->
+    <!-- 16. -->
+    <!-- <form onsubmit="return check()">
+        <input id="name">
+        <button>Submit</button>
+    </form> -->
+    <!-- 17. -->
+    <!-- <select onchange="show(this.value)">
+        <option>Select</option>
+        <option>Red</option>
+        <option>Blue</option>
+    </select> -->
+    <!-- 18.
+    <select onchange="changeColor(this.value)">
+        <option value="">Select</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+    </select>
+    <input id="value"> -->
+    <!-- 19.
+    <input id="box"> -->
+    <!-- 20.
+    <input id="inp">
+    <p id="msg"></p> -->
+    <!-- 21.
+    <input id="t">
+    <p id="out"></p> -->
+    <!-- 22.
+    <input id="text">
+    <p id="count"></p> -->
+    <!-- 23.
+    <button onclick="show(event)">Click</button> -->
+    <!-- 24.
+    <button onclick="btn(this)">A</button>
+    <button onclick="btn(this)">B</button> -->
+    <!-- 25.
+    <div onclick="alert('Parent')">
+        <button onclick="alert('Child')">Click</button>
+    </div> -->
+
+    <script>
+        // 1.
+        // function showAlert(){
+        //     alert("Clicked!..");
+        // }
+        // ------------------------------------------
+        // 2.
+        // window.onload=function(){
+        //     console.log("Page loading..");
+        // }
+        // ------------------------------------------
+        // 3.
+        // function changeColor(){
+        //     document.body.style.backgroundColor="lightpink";
+        // }
+        // ------------------------------------------
+        // 4.
+        // function show(){
+        //     paragraph.style.display="block";
+        // }
+        // function hide(){
+        //     paragraph.style.display="none";
+        // }
+        // ------------------------------------------
+        // 5.
+        //function change(){
+        //document.querySelector("div").innerText="Text Changed.";
+        //}
+        // ------------------------------------------
+        // 6.
+        // function size(){
+        //     document.querySelector("p").style.fontSize="35px";
+        // }
+        // ------------------------------------------
+        // 7.
+        // let box = document.getElementById("box");
+        // box.onmouseenter= function() {
+        //      box.style.background="blue";
+        // }
+        // box.onmouseleave=function() {
+        //      box.style.background="peachpuff";
+        // }
+        // ------------------------------------------
+        // 8.
+        // btn.onmouseover= function(){
+        //     tool.style.display="inline";
+        // }
+        // btn.onmouseout=function(){
+        //     tool.style.display="none";
+        // }
+        // ------------------------------------------
+        // 9.
+        // var area=document.getElementById("area");
+        // area.onmousemove=function(e){
+        //     area.innerText="X: " + e.offsetX +"Y: " + e.offsetY;
+        // }
+        // ------------------------------------------
+        // 10.
+        // let box=document.getElementById("box");
+        // box.onmousemove=function(){
+        //     box.style.background=
+        //     "rgb(" + Math.random()*255 + "," +
+        //     Math.random()*255 + "," +
+        //     Math.random()*255 + ")";
+        // }
+        // ------------------------------------------
+        // 11.
+        // document.addEventListener("contextmenu", e => e.preventDefault());
+        // ------------------------------------------
+        // 12.
+        //  document.addEventListener("contextmenu",e=>{
+        //     e.preventDefault();
+        //     alert("Disabled");
+        // });
+        // ------------------------------------------
+        // 13.
+        // document.onkeydown=function(e){
+        //     console.log("Key press: " + e.key);
+        // }
+        // ------------------------------------------
+        // 14.
+        // document.getElementById("text").onkeyup=function(){
+        //     this.style.color="red";
+        // }
+        // ------------------------------------------
+        // 16.
+        // function check() {
+        //     if (name.value == "") {
+        //         alert("Field empty");
+        //         return false;
+        //     }
+        // ------------------------------------------
+        // 17.
+        // function show(val) {
+        //     alert(val);
+        // }
+        // ------------------------------------------
+        // 18.
+        // function changeColor(c) {
+        //     document.body.style.background = c;
+        // }
+        // ------------------------------------------
+        // 19.
+        // box.onfocus = function () {
+        //     this.style.background = "yellow";
+        // };
+        // box.onblur = function () {
+        //     this.style.background = "";
+        // };
+        // ------------------------------------------
+        // 20.
+        // inp.onfocus = function () {
+        //     msg.innerText = "Typing...";
+        // };
+        // inp.onblur = function () {
+        //     msg.innerText = "";
+        // };
+        // ------------------------------------------
+        // 21.
+        // t.oninput = function () {
+        //     out.innerText = this.value;
+        // };
+        // ------------------------------------------
+        // 22.
+        // text.oninput = function () {
+        //     count.innerText = this.value.length;
+        // };
+        // ------------------------------------------
+        // 23.
+        // function show(e) {
+        //     alert(e.type + " on " + e.target.tagName);
+        // }
+        // ------------------------------------------
+        // 24.
+        // function btn(b) {
+        //     alert("Button " + b.innerText);
+        // }
+        // ------------------------------------------
+    </script>
+</body>
+
+</html>
