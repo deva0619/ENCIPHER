@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- q2-<button onclick="changeBcolor()">ClickHere</button> -->
+    <!-- q4-<h2 id="count">0</h2> -->
+    <!-- q5-<button onclick="cancelAlert()">Alert Cancel</button> -->
+    <!-- q6-<button onclick="msgcancel()">MSG Cancelled</button>
+    <p id="msg"></p> -->
+    <!-- q8-<button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button> -->
+    <!-- q9-<ul>
+        <li onclick="change(this)">First</li>
+        <li onclick="change(this)">Second</li>
+        <li onclick="change(this)">Third</li>
+    </ul> -->
+    <!-- q10-<p id="size"></p> -->
+    <!-- q11-<div id="size"></div> -->
+    <!-- q12-<button id="top" onclick="gotop()" style="display: none;position:fixed;bottom: 15px;">Move Back to Top.</button> -->
+    <!-- <q13-p id="text">load....</p> -->
+    <!-- q14-<img src="./Marina.jpeg" width="100px" height="100px">
+    <img src="./sea.jpeg" width="100px" height="100px"> -->
+
+    <script>
+        // q1
+        // setTimeout(function() {
+        //     alert("Hello comes after 3 sec");
+        // }, 3000);
+
+        // q2
+        // function changeBcolor(){
+        //     setTimeout(function() {
+        //         document.body.style.backgroundColor="lightpink";
+        //     }, 5000);
+        // }
+
+        // q3
+        // setInterval(function() {
+        //     console.log(new Date().toLocaleTimeString());
+        // }, 1000);
+
+        // q4
+        // let c=0;
+        // setInterval(function() {
+        //     c++;
+        //     document.getElementById("count").innerText=c;
+        // }, 1000);
+
+        // q5
+        // let time=setTimeout(function() {
+        //     alert("seconds passed=10");
+        // }, 10000);
+        // function cancelAlert(){
+        //     clearTimeout(time);
+        // }
+
+        // q6
+        // let t=setTimeout(function() {
+        //     document.getElementById("msg").innerText="Hello";
+        // }, 5000);
+        // function msgcancel(){
+        //     clearTimeout(t);
+        // }
+
+        // q7
+        // let n=1;
+        // let gap=setInterval(function() {
+        //     console.log(n);
+        //     n++;
+        // }, 1000);
+        // setTimeout(function() {
+        //      clearInterval(interval);
+        //     }, 10000);
+
+        // q8
+        // let i;
+        // let num=0;
+        // function start(){
+        //     i=setInterval(function() {
+        //         console.log(num++);
+        //     }, 1000);
+        // }
+        // function stop() {
+        //     clearInterval(i);
+        // }
+
+        // q9
+        // function change(el) {
+        //     el.style.backgroundColor="red";
+        // }
+
+        // q10
+        // window.onresize=function(){
+        //     if(window.innerwidth<600){
+        //         document.getElementById("size").innerText="Mobile view";
+        //     }
+        //     else{
+        //         document.getElementById("size").innerText="Desktop view";
+        //     }
+        // }
+
+        // q11
+        // window.onresize=function(){
+        //     document.getElementById("size").innerText="Width: " + window.innerWidth + " Height: " + window.innerHeight;
+        // }
+
+        // q12
+        // window.onscroll=function(){
+        //     if(window.scrollY > 200){
+        //         document.getElementById("top").style.display="block";
+        //     }
+        //     else{
+        //         document.getElementById("top").style.display="none";
+        //     }
+        // }
+        // function gotop(){
+        //     window.scrollTo(0,0);
+        // }
+
+        // q13
+        // document.addEventListener("DOMContentLoaded",function() {
+        //     document.getElementById("text").innerText="DOM is Fully Loaded..";
+        // })
+
+        // q14
+        // window.onload=function(){
+        //     alert("Img Loaded.");
+        // }
+    </script>
+</body>
+</html>
