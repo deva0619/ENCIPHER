@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CalculatorJs</title>
+    <link rel="stylesheet" href="external.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
+                8.3 + 1.7
+            </div>
+            <div class="buttons">
+                <button class="op">+</button>
+                <button class="op">-</button>
+                <button class="op">*</button>
+                <button class="op">/</button>
+                <button class="num">7</button>
+                <button class="num">8</button>
+                <button class="num">9</button>
+                <button class="num">4</button>
+                <button class="num">5</button>
+                <button class="num">6</button>
+                <button class="num">1</button>
+                <button class="num">2</button>
+                <button class="num">3</button>
+                <button class="num">0</button>
+                <button class="num">.</button>
+                <button class="clear">C</button>
+                <button class="equal">=</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const display = document.querySelector(".display");
+        const buttons = document.querySelectorAll("button");
+        let exp = "";
+        function isOperator(ch) {
+            return ["+", "-", "*", "/"].includes(ch);
+        }
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const value = btn.innerText;
+                const lchar = exp.slice(-1);
+                if (value === "C") {
+                    exp = "";
+                    display.innerText = "0";
+                    return;
+                }
+                if (value === "=") {
+                    try {
+                        exp = eval(exp).toString();
+                        display.innerText = exp;
+                    } catch {
+                        display.innerText = "Error";
+                        exp = "";
+                    }
+                    return;
+                }
+                if (isOperator(value) && isOperator(lchar)) {
+                    exp = exp.slice(0, -1) + value;
+                } else {
+                    exp += value;
+                }
+                display.innerText = exp;
+            });
+        });
+    </script>
+</body>
+</html>
