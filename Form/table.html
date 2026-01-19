@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            background: white;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: lightblue;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>REGISTERED DATA</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Gender</th>
+            <th>Skills</th>
+            <th>Message</th>
+            <th>Course</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <script>
+        let records = JSON.parse(localStorage.getItem("records")) || [];
+        let tableBody = document.getElementById("tableBody");
+
+        for (let i = 0; i < records.length; i++) {
+            tableBody.innerHTML += `
+                <tr>
+                    <td>${records[i].name}</td>
+                    <td>${records[i].password}</td>
+                    <td>${records[i].email}</td>
+                    <td>${records[i].date}</td>
+                    <td>${records[i].gender}</td>
+                    <td>${records[i].skills}</td>
+                    <td>${records[i].message}</td>
+                    <td>${records[i].course}</td>
+                    <td><button onclick="editRow(${i})">Edit</button></td>
+                    <td><button onclick="deleteRow(${i})">Delete</button></td>
+                </tr>
+            `;
+        }
+
+        function editRow(i) {
+            localStorage.setItem("editIndex", i);
+            window.location.href = "form.html";
+        }
+
+        function deleteRow(i) {
+            if (confirm("Delete this record?")) {
+                records.splice(i, 1);
+                localStorage.setItem("records", JSON.stringify(records));
+                location.reload();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

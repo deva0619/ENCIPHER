@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: rgb(223, 187, 192);
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        form {
+            background: lightblue;
+            width: 700px;
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 95%;
+            padding: 6px;
+            margin-top: 5px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 95%;
+            padding: 8px;
+            background: lightcoral;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>REGISTRATION FORM</h2>
+
+    <form id="form">
+        <label>Name:
+            <input type="text" id="text" required>
+        </label><br>
+
+        <label>Password:
+            <input type="password" id="password" required>
+        </label><br>
+
+        <label>Email:
+            <input type="email" id="email" required>
+        </label><br>
+
+        <label>Date:
+            <input type="date" id="date" required>
+        </label><br>
+
+        <label>Skills:
+            <input type="checkbox" name="skills" value="JAVA"> JAVA
+            <input type="checkbox" name="skills" value="Python"> Python
+            <input type="checkbox" name="skills" value="HTML,CSS"> HTML,CSS
+        </label><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female<br><br>
+
+        <label>Message:</label>
+        <textarea id="textarea"></textarea><br>
+
+        <label>Course Type:</label>
+        <select id="select">
+            <option value="">Select</option>
+            <option>Full-time</option>
+            <option>Part-time</option>
+        </select><br><br>
+
+        <input type="hidden" id="edit">
+
+        <button type="submit">Submit</button>
+        <button type="button" id="deleteBtn" style="display:none;background: blue;">Delete</button>
+    </form>
+
+    <script>
+        let records = JSON.parse(localStorage.getItem("records")) || [];
+        let editIndex = document.getElementById("edit");
+        if (localStorage.getItem("editIndex") !== null) {
+            let i = localStorage.getItem("editIndex");
+            let d = records[i];
+            text.value = d.name;
+            password.value = d.password;
+            email.value = d.email;
+            date.value = d.date;
+            textarea.value = d.message;
+            select.value = d.course;
+            editIndex.value = i;
+            let g = document.getElementsByName("gender");
+            for (let j = 0; j < g.length; j++) {
+                if (g[j].value === d.gender) {
+                    g[j].checked = true;
+                }
+            }
+            let s = document.getElementsByName("skills");
+            for (let j = 0; j < s.length; j++) {
+                if (d.skills && d.skills.includes(s[j].value)) {
+                    s[j].checked = true;
+                }
+            }
+
+            document.getElementById("deleteBtn").style.display = "block";
+        }
+
+        document.getElementById("form").onsubmit = function (e) {
+            e.preventDefault();
+
+            let P = /^[A-Z][a-z]{3}[@.\-$][0-9]$/;
+            if (!P.test(password.value)) {
+                alert("Password must be 6 characters: 1 uppercase, 3 lowercase, 1 special, 1 number");
+                return;
+            }
+
+            if (!email.value.includes("@") || !email.value.includes(".")) {
+                alert("Invalid email");
+                return;
+            }
+            let genderValue = "";
+            let g = document.getElementsByName("gender");
+            for (let i = 0; i < g.length; i++) {
+                if (g[i].checked) {
+                    genderValue = g[i].value;
+                }
+            }
+            let skills = "";
+            let s = document.getElementsByName("skills");
+            for (let i = 0; i < s.length; i++) {
+                if (s[i].checked) {
+                    skills += s[i].value + " ";
+                }
+            }
+
+            let data = {
+                name: text.value,
+                password: password.value,
+                email: email.value,
+                date: date.value,
+                gender: genderValue,
+                skills: skills,
+                message: textarea.value,
+                course: select.value
+            };
+
+            if (editIndex.value !== "") {
+                records[editIndex.value] = data;
+                localStorage.removeItem("editIndex");
+            } else {
+                records.push(data);
+            }
+
+            localStorage.setItem("records", JSON.stringify(records));
+            window.location.href = "table.html";
+        };
+
+        document.getElementById("deleteBtn").onclick = function () {
+            if (confirm("Delete this record?")) {
+                records.splice(editIndex.value, 1);
+                localStorage.setItem("records", JSON.stringify(records));
+                localStorage.removeItem("editIndex");
+                window.location.href = "table.html";
+            }
+        };
+    </script>
+
+</body>
+
+</html>
