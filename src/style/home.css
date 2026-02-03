@@ -1,0 +1,36 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://tse4.mm.bing.net/th/id/OIP.WMSIawmwynFELden-GbLbAHaEK?w=312&h=180&c=7&r=0&o=7&pid=1.7&rm=3");
+  background-size: cover;
+  background-position: center;
+}
+
+.home-content {
+  background: rgba(126, 121, 121, 0.75);
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 330px;
+}
+
+.home-content h1 {
+  margin-bottom: 10px;
+}
+
+.home-content button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-content button:hover {
+  background: lightslategray;
+}
