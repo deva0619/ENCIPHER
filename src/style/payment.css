@@ -1,0 +1,29 @@
+.payment-container {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background: lightgray;
+}
+
+.payment-container input {
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid  blueviolet;
+}
+
+.payment-container button {
+  padding: 12px 25px;
+  background: lightsteelblue;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-container button:hover {
+  background:lightgreen;
+}

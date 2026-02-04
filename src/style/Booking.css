@@ -1,0 +1,68 @@
+.booking-container {
+  text-align: center;
+  padding: 30px;
+  background: lightgray;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.booking-container h2 {
+  margin-bottom: 15px;
+  color: black;
+}
+
+.seat-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  color: black;
+}
+
+.row-label {
+  width: 25px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 6px;
+  background: grey;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.seat:hover {
+  background: lightseagreen;
+}
+
+.seat.selected {
+  background: lightcoral;
+  font-weight: bold;
+}
+
+.proceed-btn {
+  padding: 12px 25px;
+  background: lightsteelblue;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.proceed-btn:hover {
+  background: lightgreen;
+}
